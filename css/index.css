@@ -1,0 +1,198 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.fitnessbg {
+    width: 100%;
+    height: 500px;
+
+}
+
+.grid-bg {
+    height: 100%;
+    width: 70%;
+    border-radius: 10px;
+}
+
+.container-middle {
+    position: absolute;
+    top: 150px;
+
+}
+
+.container-middle>h1,
+.container-middle>h3 {
+    color: rgb(13, 163, 51);
+}
+
+.container-fluid>a>strong {
+    color: rgb(13, 163, 51);
+}
+
+.container-text {
+    background-color: black;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.container-text>h1,
+.container-text>h6 {
+    text-align: center;
+    color: white;
+}
+
+.SITEMAP>a {
+    text-decoration: none;
+}
+
+/* background-color: linear-gradient(to right, rgb(54, 53, 53), rgb(82, 82, 80), rgb(114, 112, 112));
+ */
+.owner-container {
+    background-color: rgb(214, 210, 210);
+    border-radius: 20px;
+    text-align: center;
+}
+#profile:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+.container-fluid {
+    width: 100%;
+    padding-bottom: 35px;
+}
+
+.NewOpenHours>h3 {
+    color: red;
+
+    position: relative;
+    animation-name: NewOpenHoursexample;
+    animation-duration: 11s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+}
+.choseus-section {
+    background: #0a0a0a;
+    padding-bottom: 70px;
+}
+.spad {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+figcaption, figure, header, main, nav, section {
+    display: block;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+user agent stylesheet
+section {
+    display: block;
+}
+/* @keyframes NewOpenHoursexample {
+    0% {
+        left: 0px;
+        top: 0px;
+    }
+
+    100% {
+        left: 400px;
+        top: 0px;
+        z-index: 1;
+    }
+
+
+} */
+.Footer {
+    background-color: black;
+    color: white;
+}
+
+.navbar-before-scroll {
+    background-color: black
+}
+
+/* Color of the links BEFORE scroll */
+.navbar-before-scroll .nav-link,
+.navbar-before-scroll .navbar-toggler-icon {
+
+    color: whitesmoke;
+}
+
+/* Color of the links AFTER scroll */
+.navbar-after-scroll .nav-link,
+.navbar-after-scroll .navbar-toggler-icon {
+    color: rgb(233, 233, 240);
+}
+
+/* Color of the navbar AFTER scroll */
+.navbar-after-scroll {
+    background-color: rgb(12, 11, 11)
+}
+
+/* Transition after scrolling */
+.navbar-after-scroll {
+    transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+}
+
+/* Transition to the initial state */
+.navbar-before-scroll {
+    transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+}
+
+/* An optional height of the navbar AFTER scroll */
+.navbar.navbar-before-scroll.navbar-after-scroll {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.main-navbar{
+    position: fixed;
+}
+
+/* Navbar on mobile */
+@media (max-width: 991.98px) {
+    #main-navbar {
+        background-color: black;
+    }
+
+    .nav-link,
+    .navbar-toggler-icon {
+        color: whitesmoke !important;
+    }
+}
+
+.card {
+    padding: 20px;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: 0.25rem;
+}
+
+
