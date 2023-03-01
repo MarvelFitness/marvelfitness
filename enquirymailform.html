@@ -10,36 +10,31 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-        <script src="https://smtpjs.com/v3/smtp.js"></script>
-        <title>Enquiry Form</title>
-        <script src="./mail.js"></script>
+
+    <title>Enquiry Form</title>
 </head>
 
 <body>
-
-    <form class="container">
+    <form action="#" class="container" onsubmit="SendEmail(event)">
         <h1>Enquiry Form</h1>
         <div class="form-group">
             <label for="Firstname">First Name</label>
-            <input type="text" class="form-control" id="Firstname" 
-                placeholder="Enter First Name">
+            <input type="text" class="form-control" id="Firstname" placeholder="Enter First Name">
             <!--<small id="emailHelp" class="form-text text-muted">We'll never share your First Name with anyone
                 else.</small>-->
         </div>
 
         <div class="form-group">
             <label for="lastname">Last Name</label>
-            <input type="text" class="form-control" id="lastname" 
-                placeholder="Enter Last Name">
-             <!--<small id="emailHelp" class="form-text text-muted">We'll never share your First Name with anyone
+            <input type="text" class="form-control" id="lastname" placeholder="Enter Last Name">
+            <!--<small id="emailHelp" class="form-text text-muted">We'll never share your First Name with anyone
                 else.</small>-->
         </div>
 
         <div class="form-group">
             <label for="Email">Email address</label>
-            <input type="email" class="form-control" id="Email" 
-                placeholder="Enter Email address">
-             <!--<small id="emailHelp" class="form-text text-muted">We'll never share your First Name with anyone
+            <input type="email" class="form-control" id="Email" placeholder="Enter Email address">
+            <!--<small id="emailHelp" class="form-text text-muted">We'll never share your First Name with anyone
                 else.</small>-->
         </div>
 
@@ -47,44 +42,83 @@
             <label for="Address">Address</label>
             <!--<input type="textarea" class="form-control" id="Address" 
                 placeholder="Enter Address">-->
-                <br>
-                 <textarea rows = "5" cols = "60" placeholder="Enter Address" name = "description" class="form-control" id="Address"></textarea>
+            <br>
+            <textarea rows="5" cols="60" placeholder="Enter Address" name="description" class="form-control"
+                id="Address"></textarea>
             <!--<small id="emailHelp" class="form-text text-muted">We'll never share your First Name with anyone
                 else.</small>-->
         </div>
 
         <div class="form-group">
             <label for="Height">Height in cm</label>
-            <input type="number" class="form-control" id="Height" 
-                placeholder="Enter Height">
-             <!--<small id="emailHelp" class="form-text text-muted">We'll never share your First Name with anyone
+            <input type="number" class="form-control" id="Height" placeholder="Enter Height">
+            <!--<small id="emailHelp" class="form-text text-muted">We'll never share your First Name with anyone
                 else.</small>-->
         </div>
 
         <div class="form-group">
             <label for="Weight">Weight in Kg</label>
-            <input type="number" class="form-control" id="Weight" 
-                placeholder="Enter Weight">
-             <!--<small id="emailHelp" class="form-text text-muted">We'll never share your First Name with anyone
+            <input type="number" class="form-control" id="Weight" placeholder="Enter Weight">
+            <!--<small id="emailHelp" class="form-text text-muted">We'll never share your First Name with anyone
                 else.</small>-->
         </div>
 
         <div class="form-group">
             <label for="Time">Prefer Date Time</label>
-            <input type="datetime-local" class="form-control" id="Time" 
-                placeholder="Enter Prefer Time">
+            <input type="datetime-local" class="form-control" id="Time" placeholder="Enter Prefer Time">
             <!--<small id="emailHelp" class="form-text text-muted">We'll never share your First Name with anyone
                 else.</small>-->
         </div>
         <br>
         <h6><strong>Note :</strong> We'll never share your details with anyone
             else.</h6>
-            <br>
+        <br>
         <button type="submit" class="btn btn-primary">Submit</button>
         <a class="btn  btn-primary" href="./index.html"> Go back</a>
         <br>
     </form>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        const form = document.querySelector('container');
+        const FName = document.getElementById('Firstname');
+        const LName = document.getElementById('lastname');
+        const Email = document.getElementById('Email');
+        function SendEmail(e) {
 
+            debugger;
+            e.preventDefault();
+            /* 
+
+            const Address = document.querySelector('contact_form');
+            const Height = document.querySelector('contact_form');
+            const Weight = document.querySelector('contact_form');
+            const PreferTime = document.querySelector('contact_form'); */
+
+
+            //Function Send email
+            /*     Email.send({
+                    SecureToken: "f2512665-01b4-4593-a2af-f5c520f20c6e",
+                    To: 'darshanmane29@gmail.com',
+                    From: "stunnerrey@gmail.com",
+                    Subject: "Contact Form",
+                    Body: "And this is the body"
+                }).then(
+                    message => alert(message)
+                ); */
+            Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "stunnerrey@gmail.com",
+                Password: "3AA109F0CDE6A3E26684C743C8386D95D285",
+                To: 'stunnerrey@gmail.com',
+                From: Email,
+                Subject: "This is the subject",
+                Body: FName + " " + LName
+            }).then(
+                message => alert(message)
+            );
+            return alert("Send Successfully");
+        }
+    </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
